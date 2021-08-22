@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB BASICS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="link-primary nav-radius">
+      <div class="nav-brand">#FullStackDeveloper</div>
+      <ul class="center-container nav-align">
+        <li class="list-inline list-non-bullet">
+          <a class="link" href="./index.html">Home</a>
+        </li>
+        <li class="list-inline list-non-bullet">
+          <a class="link" href="./projects.html">Projects</a>
+        </li>
+        <li class="list-inline list-non-bullet">
+          <a class="link" href="./blogs.html">Blogs</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <img
+        class="header-img"
+        src="./images/undraw_File_bundle_xl7g.svg"
+        alt=""
+      />
+      <h1 class="header-text">How a <span>JavaScript code</span> runs ?</h1>
+      <small>22-08-2021</small>
+    </header>
+    <section class="section offWhite">
+      <div class="center-container">
+        <h1>Execution Context</h1>
+        <p>
+          We know that any javascript code runs in a call stack or execution
+          stack. Inside call stack everything happens in Global execution
+          Context. Global execution context has two phases 1.Memory Allocation
+          Phase 2.Code Execution phase.
+        </p>
+        <img src="./images/Capture4.PNG" alt="">
+        <p>
+            <img src="./images/Capture2.PNG" alt="" />
+            Lets take the above code snippet to understand the concept.
+            In the memory Allocation Phase,
+            Var name will be assigned to undefined,
+            GetName will be assigned to the function body,
+            fullName will be assigned to undefined,
+            NewName will also be assigned to undefined.
+            
+        </p>
+        <img src="./images/Capture3.PNG" alt="" />
+        <p>In the Code Execution  Phase,
+            Name will be assigned to "steve"
+            Now when ever there is function invocation,
+            An Execution context is created which sits on top of global execution Context in the call stack.
+            </p>
+            <img src="./images/Capture5.PNG" alt="">
+            <img src="./images/Capture6.PNG" alt="">
+            <p>Now  again two phases of execution context occurs in fullName
+              i.e Memory Allocation Phase and code Execution Phase.
+              </p>
+              <img src="./images/Capture7.PNG" alt="">
+              <p>After two phases is done,due to  the return statement ,the execution Context  i.e fullName
+                  which sits on the top of GEC gets destroyed.
+                  Then the function gets returned to the location from where it was invoked.
+                  </p>
+                  <img src="./images/Capture8.PNG" alt="">
+                  <p>Then similar things happens to getName.
+                      So, this is small explanation to undertand how a javascript code runs.
+                      </p>
+      </div>
+  
+    </section>
+
+    <footer class="footer">
+      <div>Connect me on :</div>
+
+      <ul>
+        <li class="list-inline list-non-bullet "> <a href="https://mobile.twitter.com/Srinibas_39"><i class="fab fa-twitter"></i> Twitter</a> </li>
+        <li class="list-inline list-non-bullet " > <a href="https://github.com/srinibas39"><i class="fab fa-github"></i> Github </a> </li>
+        <li class="list-inline list-non-bullet "> <a href="https://www.linkedin.com/in/srinibas-khuntia-bbb496154/"><i class="fab fa-linkedin"></i> Linkedin</a> </li>
+    </ul>
+    </footer>
+  </body>
+</html>

@@ -190,3 +190,7 @@ padding: 1rem;
 .footer ul {
     padding-inline-start: 0px;
 }
+small{
+  display: block;
+  text-align: center;
+}
